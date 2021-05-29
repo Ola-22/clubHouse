@@ -27,3 +27,17 @@
   text-align: center;
   justify-content: space-evenly;
 }
+
+.phoneConfirmContainer p span{
+  font-weight: 500;
+}
+
+.backBtn{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.backBtn img{
+  width: 20px;
+}
