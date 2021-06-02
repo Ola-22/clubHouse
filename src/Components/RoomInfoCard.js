@@ -6,8 +6,8 @@ function RoomInfoCard() {
   console.log("room", data);
   return (
     <div>
-      {data.map((item) => (
-        <div>
+      {data.map((item, index) => (
+        <div key={index}>
           <div>
             <div className={style.roomCardContainer}>
               <h6> {item.title}</h6>
@@ -18,8 +18,8 @@ function RoomInfoCard() {
                   <img src="/images/user-img2.jpg" alt="" />
                 </div>
                 <div>
-                  {item.members.map((person) => (
-                    <p>
+                  {item.members.map((person, index) => (
+                    <p key={index}>
                       {person.first_name} {person.last_name} <BsChatDots />
                     </p>
                   ))}
