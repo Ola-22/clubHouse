@@ -1,5 +1,7 @@
 import SwipeableBottomSheet from "react-swipeable-bottom-sheet";
 import style from "../style/bottomSheet.module.css";
+import NewRoom from "./bottom_sheets/NewRoom";
+import StartRoom from "./bottom_sheets/StartRoom";
 
 function BottomSheet(props) {
   return (
@@ -7,7 +9,7 @@ function BottomSheet(props) {
       open={props.sheetVisible}
       onChange={() => {
         props.setSheetVisible(!props.sheetVisible);
-        props.setItemVisible(true);
+        props.setItemsVisible(true);
       }}
       fullScreen={props.sheetTitle == "room detail" ? true : false}
     >
@@ -16,7 +18,27 @@ function BottomSheet(props) {
         style={{
           backgroundColor: props.sheetTitle == "profile" ? "transparent" : "",
         }}
-      ></div>
+      >
+        {props.sheetTitle == "new room" ? (
+          <NewRoom
+            setSheetCreateRoom={props.setSheetCreateRoom}
+            setSheetVisible={(item) => {
+              props.setSheetVisible(item);
+              props.setItemsVisible(true);
+            }}
+          />
+        ) : props.sheetTitle == "start room" ? (
+          <StartRoom
+            setSheetCreateRoom={props.setSheetCreateRoom}
+            setSheetVisible={(item) => {
+              props.setSheetVisible(item);
+              props.setItemsVisible(true);
+            }}
+          />
+        ) : (
+          ""
+        )}
+      </div>
     </SwipeableBottomSheet>
   );
 }
