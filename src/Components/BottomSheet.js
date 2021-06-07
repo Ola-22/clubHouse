@@ -21,6 +21,7 @@ function BottomSheet(props) {
       >
         {props.sheetTitle == "new room" ? (
           <NewRoom
+            cardDetail={props.cardDetail}
             setSheetCreateRoom={props.setSheetCreateRoom}
             setSheetVisible={(item) => {
               props.setSheetVisible(item);

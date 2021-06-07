@@ -2,13 +2,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import AllowNotification from "./pages/AllowNotification";
 import CodeConfirm from "./pages/CodeConfirm";
+import Explore from "./pages/Explore";
 import Home from "./pages/Home";
 import AppLayout from "./pages/Layouts/AppLayout";
 import PlanLayout from "./pages/Layouts/PlanLayout";
 import PhoneConfirmation from "./pages/PhoneConfirmation";
 import Welcome from "./pages/Welcome";
 
-function App() {
+function App(props) {
+  console.log("cardDetail", props.cardDetail);
   return (
     <BrowserRouter>
       <Route
@@ -28,10 +30,11 @@ function App() {
           </PlanLayout>
         </Switch>
       </Route>
-      <Route exact path={["/home"]}>
+      <Route exact path={["/home", "/explore"]}>
         <AppLayout>
           <Switch>
             <Route exact path="/home" component={() => <Home />} />
+            <Route exact path="/explore" component={Explore} />
           </Switch>
         </AppLayout>
       </Route>
