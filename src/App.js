@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import AppLayout from "./pages/Layouts/AppLayout";
 import PlanLayout from "./pages/Layouts/PlanLayout";
 import PhoneConfirmation from "./pages/PhoneConfirmation";
+import Profile from "./pages/Profile";
 import Welcome from "./pages/Welcome";
 
 function App(props) {
@@ -30,11 +31,12 @@ function App(props) {
           </PlanLayout>
         </Switch>
       </Route>
-      <Route exact path={["/home", "/explore"]}>
+      <Route exact path={["/home", "/explore", "/profile"]}>
         <AppLayout>
           <Switch>
             <Route exact path="/home" component={() => <Home />} />
             <Route exact path="/explore" component={Explore} />
+            <Route exact path="/profile" component={Profile} />
           </Switch>
         </AppLayout>
       </Route>
