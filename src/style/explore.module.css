@@ -31,13 +31,7 @@
   margin-top: 0.4em;
   margin-left: 0.5em;
 }
-/* .head img{
-  width: 15px;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateX(-50%);
-} */
+
 
 .peopleContainer{
   background-color: #ffffff;
@@ -78,4 +72,67 @@
   overflow: hidden;
   text-overflow: ellipsis;
   color: #aaaaaa;
+}
+
+.peopleContainer button{
+  background-color: transparent;
+  border: 2px solid var(--btnBgColor);
+  border-radius: 2em;
+  color: var(--btnBgColor);
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0.1em 1.2em;
+}
+
+.conversationCard{
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-shadow: 0 2px 3px #cccccc;
+}
+
+.conversationCard h6{
+  color: var(--textColor);
+  font-size: 1em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.conversationCard h6 span{
+  margin-right: 0.2em;
+}
+
+.conversationCard p{
+  margin: 0;
+  color: #aaaaaa;
+  line-height: 1.2;
+  font-size: 0.8em;
+}
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  z-index: 5;
+  background-color: #f2f0e4;
+}
+
+.head{
+  position: relative;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head img{
+  width: 15px;
+   position: absolute; 
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
 }
